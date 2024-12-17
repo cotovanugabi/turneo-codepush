@@ -16,10 +16,10 @@ const domain = require("express-domain-middleware");
 import * as express from "express";
 import * as q from "q";
 
-interface Secret {
-  id: string;
-  value: string;
-}
+// interface Secret {
+//   id: string;
+//   value: string;
+// }
 
 function bodyParserErrorHandler(err: any, req: express.Request, res: express.Response, next: Function): void {
   if (err) {
