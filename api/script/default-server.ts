@@ -132,6 +132,7 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       app.set("view engine", "ejs");
       app.use("/auth/images/", express.static(__dirname + "/views/images"));
       app.use(api.headers({ origin: process.env.CORS_ORIGIN || "http://localhost:4000" }));
+      app.use("/auth/*", auth.authenticate);
       app.use(api.health({ storage: storage, redisManager: redisManager }));
 
       if (process.env.DISABLE_ACQUISITION !== "true") {
