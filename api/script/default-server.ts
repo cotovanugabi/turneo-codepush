@@ -174,7 +174,6 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
         if (isApiRequest(req)) {
           next();
         } else {
-          console.log("Serving React app");
           res.sendFile(path.join(publicPath, "index.html"));
         }
       });
