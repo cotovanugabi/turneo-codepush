@@ -25,8 +25,8 @@ resource servicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
     reserved: true
   }
   sku: {
-    name: 'S1'
-    tier: 'Standard'
+    name: 'B1'
+    tier: 'Basic'
   }
 }
 
@@ -67,6 +67,49 @@ resource webApp 'Microsoft.Web/sites@2022-03-01' = {
         { name: 'CORS_ORIGIN', value: serverUrl }
         { name: 'LOGGING', value: logging ? 'true' : 'false' }
       ]
+    }
+  }
+}
+
+resource authSettings 'Microsoft.Web/sites/config@2022-03-01' = {
+  parent: webApp
+  name: 'authsettingsV2'
+  properties: {
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+      redirectToProvider: 'azureActiveDirectory'
+      excludedPaths: ['/authenticated']
+    }
+    httpSettings: {
+      requireHttps: true
+      routes: {
+        apiPrefix: '/.auth'
+      }
+    }
+    identityProviders: {
+      azureActiveDirectory: {
+        enabled: true
+        registration: {
+          openIdIssuer: 'https://sts.windows.net/${subscription().tenantId}/v2.0'
+          clientId: microsoft_client_id
+          clientSecretSettingName: 'MICROSOFT_CLIENT_SECRET'
+        }
+        validation: {
+          allowedAudiences: [microsoft_client_id]
+          defaultAuthorizationPolicy: {
+            allowedPrincipals: {}
+          }
+        }
+        login: {
+          disableWWWAuthenticate: false
+        }
+      }
+    }
+    login: {
+      preserveUrlFragmentsForLogins: true
+      tokenStore: {
+        enabled: true
+      }
     }
   }
 }
