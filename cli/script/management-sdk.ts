@@ -87,6 +87,7 @@ class AccountManager {
   public isAuthenticated(throwIfUnauthorized?: boolean): Promise<boolean> {
     return Promise<any>((resolve, reject, notify) => {
       const request: superagent.Request<any> = superagent.get(`${this._serverUrl}${urlEncode(["/authenticated"])}`);
+
       this.attachCredentials(request);
 
       request.end((err: any, res: superagent.Response) => {
