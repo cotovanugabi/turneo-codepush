@@ -50,9 +50,11 @@ export class PassportAuthentication {
   constructor(config: AuthenticationConfig) {
     this._serverUrl = process.env["SERVER_URL"];
 
+    // This session is neither encrypted nor signed beyond what is provided by SSL
+    // By default, the 'secure' flag will be set if the node process is using SSL
     this._cookieSessionMiddleware = cookieSession({
       httpOnly: true,
-      ttl: 3600000,
+      ttl: 3600000, // One hour in milliseconds
       name: "oauth.session",
       path: "/",
       signed: false,
@@ -60,12 +62,9 @@ export class PassportAuthentication {
     });
     this._storageInstance = config.storage;
 
-    // Add bearer token strategy first
     passport.use(
       new passportBearer.Strategy((accessKey: string, done: (error: any, user?: any) => void) => {
-        console.log("[DEBUG] Validating bearer token:", accessKey);
         if (!validationUtils.isValidKeyField(accessKey)) {
-          console.log("[DEBUG] Invalid key format");
           done(/*err*/ null, /*user*/ false);
           return;
         }
@@ -73,82 +72,11 @@ export class PassportAuthentication {
         this._storageInstance
           .getAccountIdFromAccessKey(accessKey)
           .then((accountId: string) => {
-            console.log("[DEBUG] Found account ID:", accountId);
             done(/*err*/ null, { id: accountId });
           })
-          .catch((error: storage.StorageError): void => {
-            console.log("[DEBUG] Storage error:", error);
-            PassportAuthentication.storageErrorHandler(error, done);
-          })
+          .catch((error: storage.StorageError): void => PassportAuthentication.storageErrorHandler(error, done))
           .done();
       })
-    );
-
-    // Setup other providers only if configured
-    const microsoftClientId: string = process.env["MICROSOFT_CLIENT_ID"];
-    const microsoftClientSecret: string = process.env["MICROSOFT_CLIENT_SECRET"];
-    if (microsoftClientId && microsoftClientSecret) {
-      this.setupAzureAdStrategy(microsoftClientId, microsoftClientSecret);
-    }
-
-    const gitHubClientId: string = process.env["GITHUB_CLIENT_ID"];
-    const gitHubClientSecret: string = process.env["GITHUB_CLIENT_SECRET"];
-    if (gitHubClientId && gitHubClientSecret) {
-      this.setupGitHubStrategy(gitHubClientId, gitHubClientSecret);
-    }
-  }
-
-  private setupAzureAdStrategy(clientId: string, clientSecret: string): void {
-    const options: any = {
-      identityMetadata: `https://login.microsoftonline.com/${
-        process.env["MICROSOFT_TENANT_ID"] || "common"
-      }/v2.0/.well-known/openid-configuration`,
-      clientID: clientId,
-      clientSecret: clientSecret,
-      responseType: "code",
-      responseMode: "query",
-      redirectUrl: this.getCallbackUrl(PassportAuthentication.AZURE_AD_PROVIDER_NAME),
-      scope: ["email", "profile"],
-      skipUserProfile: true,
-      validateIssuer: false,
-      allowHttpForRedirectUrl: true,
-    };
-
-    passport.use(
-      new passportActiveDirectory.OIDCStrategy(
-        options,
-        (
-          iss: string,
-          sub: string,
-          profile: passport.Profile,
-          accessToken: string,
-          refreshToken: string,
-          done: (error: any, user: any) => void
-        ) => {
-          console.log("[DEBUG] Azure AD authentication successful");
-          done(/*err*/ null, profile);
-        }
-      )
-    );
-  }
-
-  private setupGitHubStrategy(gitHubClientId: string, gitHubClientSecret: string): void {
-    const options: passportGitHub.IStrategyOptions = {
-      clientID: gitHubClientId,
-      clientSecret: gitHubClientSecret,
-      callbackURL: this.getCallbackUrl(PassportAuthentication.GITHUB_PROVIDER_NAME),
-      scope: ["user:email"],
-      state: true,
-    };
-
-    passport.use(
-      new passportGitHub.Strategy(
-        options,
-        (accessToken: string, refreshToken: string, profile: passportGitHub.Profile, done: (err?: any, user?: any) => void): void => {
-          console.log("[DEBUG] GitHub authentication successful");
-          done(/*err*/ null, profile);
-        }
-      )
     );
   }
 
@@ -210,9 +138,25 @@ export class PassportAuthentication {
 
     router.use(passport.initialize());
 
-    router.get("/authenticated", limiter, this.authenticate, (req: Request, res: Response): any => {
-      res.send({ authenticated: true });
+    router.use((req: Request, res: Response, next: any) => {
+      console.log("[DEBUG] Request path:", req.path);
+      console.log("[DEBUG] Authorization header:", req.headers.authorization);
+      next();
     });
+
+    router.get(
+      "/authenticated",
+      limiter,
+      (req: Request, res: Response, next: any) => {
+        if (req.headers.authorization?.startsWith("Bearer ")) {
+          return this.authenticate(req, res, next);
+        }
+        next();
+      },
+      (req: Request, res: Response): any => {
+        res.send({ authenticated: true });
+      }
+    );
 
     // See https://developer.github.com/v3/oauth/ for more information.
     // GITHUB_CLIENT_ID:     The client ID you received from GitHub when registering a developer app.
