@@ -137,13 +137,11 @@ export class PassportAuthentication {
     const router: Router = Router();
 
     router.use(passport.initialize());
-
     router.use((req: Request, res: Response, next: any) => {
       console.log("[DEBUG] Request path:", req.path);
       console.log("[DEBUG] Authorization header:", req.headers.authorization);
       next();
     });
-
     router.get(
       "/authenticated",
       limiter,
