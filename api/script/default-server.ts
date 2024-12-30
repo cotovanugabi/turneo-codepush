@@ -166,7 +166,12 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
 
       // Middleware to check if the request is for an API route
       const isApiRequest = (req: express.Request) => {
-        return req.path.startsWith("/v0.1/") || req.path.startsWith("/auth/") || req.path.startsWith("/authenticated/");
+        return (
+          req.path.startsWith("/v0.1/") ||
+          req.path.startsWith("/v0.2/") ||
+          req.path.startsWith("/auth/") ||
+          req.path.startsWith("/authenticated/")
+        );
       };
 
       // For all other requests that aren't API routes, serve the React app
