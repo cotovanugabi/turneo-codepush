@@ -8,7 +8,6 @@ import { JsonStorage } from "./storage/json-storage";
 import { RedisManager } from "./redis-manager";
 import { Storage } from "./storage/storage";
 import { Response } from "express";
-import * as path from "path";
 const { DefaultAzureCredential } = require("@azure/identity");
 const { SecretClient } = require("@azure/keyvault-secrets");
 
@@ -16,6 +15,11 @@ import * as bodyParser from "body-parser";
 const domain = require("express-domain-middleware");
 import * as express from "express";
 import * as q from "q";
+
+interface Secret {
+  id: string;
+  value: string;
+}
 
 function bodyParserErrorHandler(err: any, req: express.Request, res: express.Response, next: Function): void {
   if (err) {
@@ -119,6 +123,10 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       // Before all other middleware to ensure all requests are tracked.
       app.use(appInsights.router());
 
+      app.get("/", (req: express.Request, res: express.Response, next: (err?: Error) => void): any => {
+        res.send("Welcome to the CodePush REST API!");
+      });
+
       app.set("etag", false);
       app.set("views", __dirname + "/views");
       app.set("view engine", "ejs");
@@ -126,7 +134,6 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       app.use(api.headers({ origin: process.env.CORS_ORIGIN || "http://localhost:4000" }));
       app.use(api.health({ storage: storage, redisManager: redisManager }));
 
-      // Set up CodePush routes first
       if (process.env.DISABLE_ACQUISITION !== "true") {
         app.use(api.acquisition({ storage: storage, redisManager: redisManager }));
       }
@@ -155,37 +162,8 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
         app.use(auth.legacyRouter());
       }
 
-      // Error handler for API routes
+      // Error handler needs to be the last middleware so that it can catch all unhandled exceptions
       app.use(appInsights.errorHandler);
-
-      // Handle frontend assets and routing after API routes
-      const publicPath = path.join(__dirname, "../../public");
-
-      // Serve static files from the React app
-      app.use(express.static(publicPath));
-
-      app.get("/", (req: express.Request, res: express.Response, next: (err?: Error) => void): any => {
-        res.sendFile(path.join(publicPath, "index.html"));
-      });
-
-      // Middleware to check if the request is for an API route
-      // const isApiRequest = (req: express.Request) => {
-      //   return (
-      //     req.path.startsWith("/v0.1/") ||
-      //     req.path.startsWith("/v0.2/") ||
-      //     req.path.startsWith("/auth/") ||
-      //     req.path.startsWith("/authenticated/")
-      //   );
-      // };
-
-      // For all other requests that aren't API routes, serve the React app
-      // app.get("*", (req, res, next) => {
-      //   if (isApiRequest(req)) {
-      //     next();
-      //   } else {
-      //     res.sendFile(path.join(publicPath, "index.html"));
-      //   }
-      // });
 
       if (isKeyVaultConfigured) {
         // Refresh credentials from the vault regularly as the key is rotated
