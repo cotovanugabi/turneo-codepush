@@ -9,7 +9,7 @@
 # npm run build
 
 # Build backend
-cd ../api
+cd api
 npm install # Required because npm ci will install only prod dependencies because of app services environment
 npm run clean
 npm run build
