@@ -3,6 +3,21 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
+# Verifică și afișează versiunea Node.js la început
+echo "Node version before build:"
+node -v
+
+# Asigură-te că folosești Node.js 18
+export NODE_VERSION=18
+if command -v nvm &> /dev/null; then
+    nvm install $NODE_VERSION
+    nvm use $NODE_VERSION
+fi
+
+# Verifică din nou versiunea Node.js
+echo "Node version after setup:"
+node -v
+
 # Build frontend
 cd frontend
 npm install
