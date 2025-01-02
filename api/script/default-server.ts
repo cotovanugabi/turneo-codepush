@@ -164,24 +164,28 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       // Serve static files from the React app
       app.use(express.static(publicPath));
 
+      app.get("/", (req: express.Request, res: express.Response, next: (err?: Error) => void): any => {
+        res.sendFile(path.join(publicPath, "index.html"));
+      });
+
       // Middleware to check if the request is for an API route
-      const isApiRequest = (req: express.Request) => {
-        return (
-          req.path.startsWith("/v0.1/") ||
-          req.path.startsWith("/v0.2/") ||
-          req.path.startsWith("/auth/") ||
-          req.path.startsWith("/authenticated/")
-        );
-      };
+      // const isApiRequest = (req: express.Request) => {
+      //   return (
+      //     req.path.startsWith("/v0.1/") ||
+      //     req.path.startsWith("/v0.2/") ||
+      //     req.path.startsWith("/auth/") ||
+      //     req.path.startsWith("/authenticated/")
+      //   );
+      // };
 
       // For all other requests that aren't API routes, serve the React app
-      app.get("*", (req, res, next) => {
-        if (isApiRequest(req)) {
-          next();
-        } else {
-          res.sendFile(path.join(publicPath, "index.html"));
-        }
-      });
+      // app.get("*", (req, res, next) => {
+      //   if (isApiRequest(req)) {
+      //     next();
+      //   } else {
+      //     res.sendFile(path.join(publicPath, "index.html"));
+      //   }
+      // });
 
       if (isKeyVaultConfigured) {
         // Refresh credentials from the vault regularly as the key is rotated
