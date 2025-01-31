@@ -1,11 +1,14 @@
+import { createContext, useContext, useState } from "react";
 import {
   Link,
   Outlet,
-  createRootRoute,
+  createRootRouteWithContext,
   createRoute,
   createRouter,
+  useParams,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { QueryClient, useSuspenseQuery } from "@tanstack/react-query";
 import {
   Sidebar,
   SidebarContent,
@@ -29,40 +32,23 @@ import {
   BreadcrumbItem,
   BreadcrumbList,
 } from "@/components/ui/breadcrumb";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  appsQueryOptions,
+  queryClient,
+  releasesQueryOptions,
+} from "./lib/client";
+import { Release } from "./types";
 
-class NotFoundError extends Error {}
-
-const fetchApps = async () => {
-  console.info("Fetching apps...");
-  await new Promise((r) => setTimeout(r, 500));
-  return ["Turneo-iOS", "Turneo-Android"];
-};
-
-const fetchReleases = async () => {
-  console.info("Fetching releases...");
-  await new Promise((r) => setTimeout(r, 500));
-  return fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((r) => r.json())
-    .then((r) => r.slice(0, 10));
-};
-
-const fetchRelease = async (releaseId: string) => {
-  console.info(`Fetching release with id ${releaseId}...`);
-  await new Promise((r) => setTimeout(r, 500));
-  const release = fetch(
-    `https://jsonplaceholder.typicode.com/posts/${releaseId}`
-  )
-    .then((r) => r.json())
-    .then((r) => r);
-
-  if (!release) {
-    throw new NotFoundError(`Release with id "${releaseId}" not found!`);
-  }
-
-  return release;
-};
-
-const rootRoute = createRootRoute({
+const rootRoute = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   component: RootComponent,
   notFoundComponent: () => {
     return (
@@ -87,14 +73,79 @@ const layoutRoute = createRoute({
   getParentRoute: () => rootRoute,
   id: "layout",
   component: LayoutComponent,
-  loader: async ({ params }: { params: { appId: string } }) => {
-    const apps = await fetchApps();
-    return { apps, appId: params.appId };
-  },
 });
 
+interface EnvironmentContextType {
+  environment: string;
+  setEnvironment: (env: string) => void;
+}
+
+const EnvironmentContext = createContext<EnvironmentContextType | undefined>(
+  undefined
+);
+
+function LayoutComponent() {
+  const { appId } = useParams({ from: "/layout/apps/$appId" });
+  const [environment, setEnvironment] = useState("production");
+
+  return (
+    <EnvironmentContext.Provider value={{ environment, setEnvironment }}>
+      <SidebarProvider defaultOpen>
+        <div className="flex h-screen min-w-full">
+          <AppSidebar />
+          <main className="flex-1 flex flex-col">
+            <header className="h-14 border-b flex items-center justify-between gap-2 px-4">
+              <div className="flex items-center gap-2">
+                <SidebarTrigger />
+                <Breadcrumb>
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink>Apps</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbLink className="text-muted-foreground">
+                        {appId}
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+              </div>
+              <Select
+                defaultValue="production"
+                onValueChange={(value) => setEnvironment(value)}
+              >
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Environment" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="production">Production</SelectItem>
+                  <SelectItem value="staging">Staging</SelectItem>
+                </SelectContent>
+              </Select>
+            </header>
+            <div className="flex-1 overflow-auto">
+              <Outlet />
+            </div>
+          </main>
+        </div>
+      </SidebarProvider>
+    </EnvironmentContext.Provider>
+  );
+}
+
+function useEnvironment() {
+  const context = useContext(EnvironmentContext);
+  if (context === undefined) {
+    throw new Error(
+      "useEnvironment must be used within an EnvironmentContext.Provider"
+    );
+  }
+  return context;
+}
+
 function AppSidebar() {
-  const { apps } = layoutRoute.useLoaderData();
+  const { data } = useSuspenseQuery(appsQueryOptions);
 
   return (
     <Sidebar>
@@ -103,7 +154,7 @@ function AppSidebar() {
           <SidebarGroupLabel>Apps</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {apps.map((app) => (
+              {data.map((app) => (
                 <SidebarMenuItem key={app}>
                   <SidebarMenuButton asChild className="w-full">
                     <Link
@@ -137,51 +188,14 @@ function AppSidebar() {
   );
 }
 
-function LayoutComponent() {
-  const { appId } = layoutRoute.useLoaderData();
-
-  return (
-    <SidebarProvider defaultOpen>
-      <div className="flex h-screen min-w-full">
-        <AppSidebar />
-        <main className="flex-1 flex flex-col">
-          <header className="h-14 border-b flex items-center gap-2 px-4">
-            <SidebarTrigger />
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink>Apps</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink className="text-muted-foreground">
-                    {appId}
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </header>
-          <div className="flex-1 overflow-auto">
-            <Outlet />
-          </div>
-        </main>
-      </div>
-    </SidebarProvider>
-  );
-}
-
 const appsRoute = createRoute({
   getParentRoute: () => layoutRoute,
   path: "apps",
-  loader: async () => {
-    const apps = await fetchApps();
-    return { apps };
-  },
-  beforeLoad: async ({ context, location }) => {
+  beforeLoad: async ({ context: { queryClient }, location }) => {
     // Redirect to first app if we're at /apps
     if (location.pathname === "/apps") {
-      const apps = await fetchApps();
-      if (apps.length > 0) {
+      const apps = queryClient.getQueryData<string[]>(["apps"]);
+      if (apps && apps.length > 0) {
         throw router.navigate({
           to: "/apps/$appId",
           params: { appId: apps[0] },
@@ -194,26 +208,26 @@ const appsRoute = createRoute({
 const appRoute = createRoute({
   getParentRoute: () => appsRoute,
   path: "$appId",
-  loader: async ({ params: { appId } }) => {
-    const releases = await fetchReleases();
-    return { releases, appId };
-  },
+  loader: ({ context: { queryClient } }) =>
+    queryClient.ensureQueryData(releasesQueryOptions),
   component: AppComponent,
 });
 
 function AppComponent() {
-  const { releases, appId } = appRoute.useLoaderData();
+  const { data: releases } = useSuspenseQuery(releasesQueryOptions);
+  const { appId } = useParams({ from: "/layout/apps/$appId" });
+  const { environment } = useEnvironment();
 
   return (
     <div className="flex h-full">
       <Card className="w-80 rounded-none border-r border-t-0 border-b-0 border-l-0">
         <ScrollArea className="h-[calc(100vh-48px)]">
           <div className="space-y-1 p-2">
-            {releases.map((release) => (
+            {releases.map((release, index) => (
               <Link
-                key={release.id}
+                key={index}
                 to="/apps/$appId/releases/$releaseId"
-                params={{ appId, releaseId: release.id.toString() }}
+                params={{ appId, releaseId: release.label }}
                 className={cn(
                   "flex items-center w-full p-2 rounded-md",
                   "hover:bg-accent hover:text-accent-foreground",
@@ -224,9 +238,9 @@ function AppComponent() {
                 }}
               >
                 <div>
-                  <div className="font-medium">{release.title}</div>
+                  <div className="font-medium">{release.label}</div>
                   <div className="text-sm text-muted-foreground line-clamp-1">
-                    {release.body}
+                    {release.target_binary_range}
                   </div>
                 </div>
               </Link>
@@ -244,8 +258,10 @@ function AppComponent() {
 const releaseRoute = createRoute({
   getParentRoute: () => appRoute,
   path: "releases/$releaseId",
-  loader: async ({ params: { releaseId } }) => {
-    const release = await fetchRelease(releaseId);
+  loader: async ({ context: { queryClient }, params: { releaseId } }) => {
+    await queryClient.ensureQueryData(releasesQueryOptions);
+    const releases = queryClient.getQueryData<Release[]>(["releases"]);
+    const release = releases?.find((r) => r.label === releaseId);
     return { release };
   },
   component: ReleaseComponent,
@@ -254,14 +270,18 @@ const releaseRoute = createRoute({
 function ReleaseComponent() {
   const { release } = releaseRoute.useLoaderData();
 
+  if (!release) {
+    return null;
+  }
+
   return (
     <div className="p-6">
       <Card>
         <CardHeader>
-          <CardTitle>{release.title}</CardTitle>
+          <CardTitle>{release.label}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-7">{release.body}</p>
+          <p className="leading-7">{release.target_binary_range}</p>
         </CardContent>
       </Card>
     </div>
@@ -271,9 +291,10 @@ function ReleaseComponent() {
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  beforeLoad: async () => {
-    const apps = await fetchApps();
-    if (apps.length > 0) {
+  beforeLoad: async ({ context: { queryClient } }) => {
+    await queryClient.ensureQueryData(appsQueryOptions);
+    const apps = queryClient.getQueryData<string[]>(["apps"]);
+    if (apps && apps.length > 0) {
       throw router.navigate({
         to: "/apps/$appId",
         params: { appId: apps[0] },
@@ -294,4 +315,7 @@ export const router = createRouter({
   routeTree,
   defaultPreload: "intent",
   defaultStaleTime: 5000,
+  defaultPreloadStaleTime: 0,
+  scrollRestoration: true,
+  context: { queryClient },
 });
