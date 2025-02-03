@@ -1,0 +1,663 @@
+[
+  {
+    "target_binary_range": ">=24.5.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v170",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v170",
+    "package_hash": "mock-package-hash-170",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3937321,
+    "upload_time": 1732280902499,
+    "diff_package_map": {
+      "mock-diff-hash-170-1": {
+        "size": 1309642,
+        "url": "https://storage.example.com/releases/mock-diff-170-1"
+      },
+      "mock-diff-hash-170-2": {
+        "size": 1309642,
+        "url": "https://storage.example.com/releases/mock-diff-170-2"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v171",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v171",
+    "package_hash": "mock-package-hash-171",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3929982,
+    "upload_time": 1732725320217
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v172",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v172",
+    "package_hash": "mock-package-hash-172",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3930001,
+    "upload_time": 1732725552203,
+    "diff_package_map": {
+      "mock-diff-hash-172-1": {
+        "size": 1304993,
+        "url": "https://storage.example.com/releases/mock-diff-172-1"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v173",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v173",
+    "package_hash": "mock-package-hash-173",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3933035,
+    "upload_time": 1732892003572,
+    "diff_package_map": {
+      "mock-diff-hash-173-1": {
+        "size": 1305356,
+        "url": "https://storage.example.com/releases/mock-diff-173-1"
+      },
+      "mock-diff-hash-173-2": {
+        "size": 1305356,
+        "url": "https://storage.example.com/releases/mock-diff-173-2"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v174",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v174",
+    "package_hash": "mock-package-hash-174",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3933041,
+    "upload_time": 1732921547809,
+    "diff_package_map": {
+      "mock-diff-hash-174-1": {
+        "size": 1305362,
+        "url": "https://storage.example.com/releases/mock-diff-174-1"
+      },
+      "mock-diff-hash-174-2": {
+        "size": 1305362,
+        "url": "https://storage.example.com/releases/mock-diff-174-2"
+      },
+      "mock-diff-hash-174-3": {
+        "size": 1305362,
+        "url": "https://storage.example.com/releases/mock-diff-174-3"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v175",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v175",
+    "package_hash": "mock-package-hash-175",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3933129,
+    "upload_time": 1733846487091,
+    "diff_package_map": {
+      "mock-diff-hash-175-1": {
+        "size": 1305450,
+        "url": "https://storage.example.com/releases/mock-diff-175-1"
+      },
+      "mock-diff-hash-175-2": {
+        "size": 1305450,
+        "url": "https://storage.example.com/releases/mock-diff-175-2"
+      },
+      "mock-diff-hash-175-3": {
+        "size": 1305450,
+        "url": "https://storage.example.com/releases/mock-diff-175-3"
+      },
+      "mock-diff-hash-175-4": {
+        "size": 1305450,
+        "url": "https://storage.example.com/releases/mock-diff-175-4"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v176",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v176",
+    "package_hash": "mock-package-hash-176",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3933478,
+    "upload_time": 1734503193514,
+    "diff_package_map": {
+      "mock-diff-hash-176-1": {
+        "size": 1305799,
+        "url": "https://storage.example.com/releases/mock-diff-176-1"
+      },
+      "mock-diff-hash-176-2": {
+        "size": 1305799,
+        "url": "https://storage.example.com/releases/mock-diff-176-2"
+      },
+      "mock-diff-hash-176-3": {
+        "size": 1305799,
+        "url": "https://storage.example.com/releases/mock-diff-176-3"
+      },
+      "mock-diff-hash-176-4": {
+        "size": 1305799,
+        "url": "https://storage.example.com/releases/mock-diff-176-4"
+      },
+      "mock-diff-hash-176-5": {
+        "size": 1305799,
+        "url": "https://storage.example.com/releases/mock-diff-176-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v177",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v177",
+    "package_hash": "mock-package-hash-177",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3933462,
+    "upload_time": 1736165504869,
+    "diff_package_map": {
+      "mock-diff-hash-177-1": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-177-1"
+      },
+      "mock-diff-hash-177-2": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-177-2"
+      },
+      "mock-diff-hash-177-3": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-177-3"
+      },
+      "mock-diff-hash-177-4": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-177-4"
+      },
+      "mock-diff-hash-177-5": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-177-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v178",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v178",
+    "package_hash": "mock-package-hash-178",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3933462,
+    "upload_time": 1736177079219,
+    "diff_package_map": {
+      "mock-diff-hash-178-1": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-178-1"
+      },
+      "mock-diff-hash-178-2": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-178-2"
+      },
+      "mock-diff-hash-178-3": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-178-3"
+      },
+      "mock-diff-hash-178-4": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-178-4"
+      },
+      "mock-diff-hash-178-5": {
+        "size": 1305783,
+        "url": "https://storage.example.com/releases/mock-diff-178-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v179",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v179",
+    "package_hash": "mock-package-hash-179",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3934659,
+    "upload_time": 1736258239406,
+    "diff_package_map": {
+      "mock-diff-hash-179-1": {
+        "size": 1306980,
+        "url": "https://storage.example.com/releases/mock-diff-179-1"
+      },
+      "mock-diff-hash-179-2": {
+        "size": 1306980,
+        "url": "https://storage.example.com/releases/mock-diff-179-2"
+      },
+      "mock-diff-hash-179-3": {
+        "size": 1306980,
+        "url": "https://storage.example.com/releases/mock-diff-179-3"
+      },
+      "mock-diff-hash-179-4": {
+        "size": 1306980,
+        "url": "https://storage.example.com/releases/mock-diff-179-4"
+      },
+      "mock-diff-hash-179-5": {
+        "size": 1306980,
+        "url": "https://storage.example.com/releases/mock-diff-179-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v180",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v180",
+    "package_hash": "mock-package-hash-180",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3937039,
+    "upload_time": 1736342564780,
+    "diff_package_map": {
+      "mock-diff-hash-180-1": {
+        "size": 1309360,
+        "url": "https://storage.example.com/releases/mock-diff-180-1"
+      },
+      "mock-diff-hash-180-2": {
+        "size": 1309360,
+        "url": "https://storage.example.com/releases/mock-diff-180-2"
+      },
+      "mock-diff-hash-180-3": {
+        "size": 1309360,
+        "url": "https://storage.example.com/releases/mock-diff-180-3"
+      },
+      "mock-diff-hash-180-4": {
+        "size": 1309360,
+        "url": "https://storage.example.com/releases/mock-diff-180-4"
+      },
+      "mock-diff-hash-180-5": {
+        "size": 1309360,
+        "url": "https://storage.example.com/releases/mock-diff-180-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v181",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v181",
+    "package_hash": "mock-package-hash-181",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938354,
+    "upload_time": 1736976692294,
+    "diff_package_map": {
+      "mock-diff-hash-181-1": {
+        "size": 1310675,
+        "url": "https://storage.example.com/releases/mock-diff-181-1"
+      },
+      "mock-diff-hash-181-2": {
+        "size": 1310675,
+        "url": "https://storage.example.com/releases/mock-diff-181-2"
+      },
+      "mock-diff-hash-181-3": {
+        "size": 1310675,
+        "url": "https://storage.example.com/releases/mock-diff-181-3"
+      },
+      "mock-diff-hash-181-4": {
+        "size": 1310675,
+        "url": "https://storage.example.com/releases/mock-diff-181-4"
+      },
+      "mock-diff-hash-181-5": {
+        "size": 1310675,
+        "url": "https://storage.example.com/releases/mock-diff-181-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v182",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v182",
+    "package_hash": "mock-package-hash-182",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938352,
+    "upload_time": 1737047384920,
+    "diff_package_map": {
+      "mock-diff-hash-182-1": {
+        "size": 1310673,
+        "url": "https://storage.example.com/releases/mock-diff-182-1"
+      },
+      "mock-diff-hash-182-2": {
+        "size": 1310673,
+        "url": "https://storage.example.com/releases/mock-diff-182-2"
+      },
+      "mock-diff-hash-182-3": {
+        "size": 1310673,
+        "url": "https://storage.example.com/releases/mock-diff-182-3"
+      },
+      "mock-diff-hash-182-4": {
+        "size": 1310673,
+        "url": "https://storage.example.com/releases/mock-diff-182-4"
+      },
+      "mock-diff-hash-182-5": {
+        "size": 1310673,
+        "url": "https://storage.example.com/releases/mock-diff-182-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v183",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v183",
+    "package_hash": "mock-package-hash-183",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938355,
+    "upload_time": 1737237418034,
+    "diff_package_map": {
+      "mock-diff-hash-183-1": {
+        "size": 1310676,
+        "url": "https://storage.example.com/releases/mock-diff-183-1"
+      },
+      "mock-diff-hash-183-2": {
+        "size": 1310676,
+        "url": "https://storage.example.com/releases/mock-diff-183-2"
+      },
+      "mock-diff-hash-183-3": {
+        "size": 1310676,
+        "url": "https://storage.example.com/releases/mock-diff-183-3"
+      },
+      "mock-diff-hash-183-4": {
+        "size": 1310676,
+        "url": "https://storage.example.com/releases/mock-diff-183-4"
+      },
+      "mock-diff-hash-183-5": {
+        "size": 1310676,
+        "url": "https://storage.example.com/releases/mock-diff-183-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v184",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v184",
+    "package_hash": "mock-package-hash-184",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938358,
+    "upload_time": 1737381926023,
+    "diff_package_map": {
+      "mock-diff-hash-184-1": {
+        "size": 1310679,
+        "url": "https://storage.example.com/releases/mock-diff-184-1"
+      },
+      "mock-diff-hash-184-2": {
+        "size": 1310679,
+        "url": "https://storage.example.com/releases/mock-diff-184-2"
+      },
+      "mock-diff-hash-184-3": {
+        "size": 1310679,
+        "url": "https://storage.example.com/releases/mock-diff-184-3"
+      },
+      "mock-diff-hash-184-4": {
+        "size": 1310679,
+        "url": "https://storage.example.com/releases/mock-diff-184-4"
+      },
+      "mock-diff-hash-184-5": {
+        "size": 1310679,
+        "url": "https://storage.example.com/releases/mock-diff-184-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v185",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v185",
+    "package_hash": "mock-package-hash-185",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938412,
+    "upload_time": 1737616830390,
+    "diff_package_map": {
+      "mock-diff-hash-185-1": {
+        "size": 1310733,
+        "url": "https://storage.example.com/releases/mock-diff-185-1"
+      },
+      "mock-diff-hash-185-2": {
+        "size": 1310733,
+        "url": "https://storage.example.com/releases/mock-diff-185-2"
+      },
+      "mock-diff-hash-185-3": {
+        "size": 1310733,
+        "url": "https://storage.example.com/releases/mock-diff-185-3"
+      },
+      "mock-diff-hash-185-4": {
+        "size": 1310733,
+        "url": "https://storage.example.com/releases/mock-diff-185-4"
+      },
+      "mock-diff-hash-185-5": {
+        "size": 1310733,
+        "url": "https://storage.example.com/releases/mock-diff-185-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v186",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v186",
+    "package_hash": "mock-package-hash-186",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938398,
+    "upload_time": 1737815771403,
+    "diff_package_map": {
+      "mock-diff-hash-186-1": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-186-1"
+      },
+      "mock-diff-hash-186-2": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-186-2"
+      },
+      "mock-diff-hash-186-3": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-186-3"
+      },
+      "mock-diff-hash-186-4": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-186-4"
+      },
+      "mock-diff-hash-186-5": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-186-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v187",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v187",
+    "package_hash": "mock-package-hash-187",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3938398,
+    "upload_time": 1737815771403,
+    "diff_package_map": {
+      "mock-diff-hash-187-1": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-187-1"
+      },
+      "mock-diff-hash-187-2": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-187-2"
+      },
+      "mock-diff-hash-187-3": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-187-3"
+      },
+      "mock-diff-hash-187-4": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-187-4"
+      },
+      "mock-diff-hash-187-5": {
+        "size": 1310719,
+        "url": "https://storage.example.com/releases/mock-diff-187-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v188",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v188",
+    "package_hash": "mock-package-hash-188",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3939880,
+    "upload_time": 1738181377856,
+    "diff_package_map": {
+      "mock-diff-hash-188-1": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-188-1"
+      },
+      "mock-diff-hash-188-2": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-188-2"
+      },
+      "mock-diff-hash-188-3": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-188-3"
+      },
+      "mock-diff-hash-188-4": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-188-4"
+      },
+      "mock-diff-hash-188-5": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-188-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v189",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v189",
+    "package_hash": "mock-package-hash-189",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3939880,
+    "upload_time": 1738313010541,
+    "diff_package_map": {
+      "mock-diff-hash-189-1": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-189-1"
+      },
+      "mock-diff-hash-189-2": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-189-2"
+      },
+      "mock-diff-hash-189-3": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-189-3"
+      },
+      "mock-diff-hash-189-4": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-189-4"
+      },
+      "mock-diff-hash-189-5": {
+        "size": 1312201,
+        "url": "https://storage.example.com/releases/mock-diff-189-5"
+      }
+    }
+  },
+  {
+    "target_binary_range": ">=24.6.0",
+    "blob_url": "https://storage.example.com/releases/mock-blob-v190",
+    "is_disabled": false,
+    "is_mandatory": true,
+    "label": "v190",
+    "package_hash": "mock-package-hash-190",
+    "released_by": "example@email.com",
+    "release_method": "Upload",
+    "rollout": 100,
+    "size": 3939877,
+    "upload_time": 1738325585237,
+    "diff_package_map": {
+      "mock-diff-hash-190-1": {
+        "size": 1312198,
+        "url": "https://storage.example.com/releases/mock-diff-190-1"
+      },
+      "mock-diff-hash-190-2": {
+        "size": 1312198,
+        "url": "https://storage.example.com/releases/mock-diff-190-2"
+      },
+      "mock-diff-hash-190-3": {
+        "size": 1312198,
+        "url": "https://storage.example.com/releases/mock-diff-190-3"
+      },
+      "mock-diff-hash-190-4": {
+        "size": 1312198,
+        "url": "https://storage.example.com/releases/mock-diff-190-4"
+      },
+      "mock-diff-hash-190-5": {
+        "size": 1312198,
+        "url": "https://storage.example.com/releases/mock-diff-190-5"
+      }
+    }
+  }
+]

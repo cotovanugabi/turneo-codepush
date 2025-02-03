@@ -1,0 +1,1451 @@
+[
+  {
+    "active": 8,
+    "installed": 287,
+    "downloaded": 137,
+    "failed": 1,
+    "label": "v97"
+  },
+  {
+    "active": 7,
+    "installed": 126,
+    "downloaded": 35,
+    "failed": 0,
+    "label": "v25"
+  },
+  {
+    "active": 0,
+    "installed": 15,
+    "downloaded": 5,
+    "failed": 0,
+    "label": "v159"
+  },
+  {
+    "active": 11,
+    "installed": 151,
+    "downloaded": 71,
+    "failed": 2,
+    "label": "v178"
+  },
+  {
+    "active": 1,
+    "installed": 47,
+    "downloaded": 20,
+    "failed": 0,
+    "label": "v118"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v9"
+  },
+  {
+    "active": 48,
+    "installed": 533,
+    "downloaded": 227,
+    "failed": 0,
+    "label": "v86"
+  },
+  {
+    "active": 1,
+    "installed": 281,
+    "downloaded": 108,
+    "failed": 1,
+    "label": "v165"
+  },
+  {
+    "active": 23,
+    "installed": 784,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "23.1.0"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v41"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v84"
+  },
+  {
+    "active": 16,
+    "installed": 278,
+    "downloaded": 109,
+    "failed": 4,
+    "label": "v47"
+  },
+  {
+    "active": 32,
+    "installed": 555,
+    "downloaded": 220,
+    "failed": 1,
+    "label": "v102"
+  },
+  {
+    "active": 16,
+    "installed": 51,
+    "downloaded": 21,
+    "failed": 0,
+    "label": "v8"
+  },
+  {
+    "active": 24,
+    "installed": 416,
+    "downloaded": 165,
+    "failed": 3,
+    "label": "v120"
+  },
+  {
+    "active": 37,
+    "installed": 277,
+    "downloaded": 94,
+    "failed": 1,
+    "label": "v48"
+  },
+  {
+    "active": 2,
+    "installed": 4,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v94"
+  },
+  {
+    "active": 5,
+    "installed": 135,
+    "downloaded": 64,
+    "failed": 0,
+    "label": "v116"
+  },
+  {
+    "active": 38,
+    "installed": 282,
+    "downloaded": 83,
+    "failed": 1,
+    "label": "v60"
+  },
+  {
+    "active": 37,
+    "installed": 463,
+    "downloaded": 121,
+    "failed": 1,
+    "label": "v75"
+  },
+  {
+    "active": 133,
+    "installed": 1232,
+    "downloaded": 517,
+    "failed": 7,
+    "label": "v168"
+  },
+  {
+    "active": 12,
+    "installed": 81,
+    "downloaded": 43,
+    "failed": 1,
+    "label": "v172"
+  },
+  {
+    "active": 106,
+    "installed": 915,
+    "downloaded": 384,
+    "failed": 3,
+    "label": "v170"
+  },
+  {
+    "active": 66,
+    "installed": 1116,
+    "downloaded": 433,
+    "failed": 3,
+    "label": "v166"
+  },
+  {
+    "active": 2,
+    "installed": 47,
+    "downloaded": 13,
+    "failed": 0,
+    "label": "v77"
+  },
+  {
+    "active": 25,
+    "installed": 447,
+    "downloaded": 191,
+    "failed": 6,
+    "label": "v127"
+  },
+  {
+    "active": 25,
+    "installed": 378,
+    "downloaded": 174,
+    "failed": 0,
+    "label": "v80"
+  },
+  {
+    "active": 8,
+    "installed": 168,
+    "downloaded": 57,
+    "failed": 0,
+    "label": "v38"
+  },
+  {
+    "active": 3,
+    "installed": 142,
+    "downloaded": 68,
+    "failed": 0,
+    "label": "v125"
+  },
+  {
+    "active": 2,
+    "installed": 88,
+    "downloaded": 34,
+    "failed": 0,
+    "label": "v57"
+  },
+  {
+    "active": 1,
+    "installed": 38,
+    "downloaded": 20,
+    "failed": 0,
+    "label": "v43"
+  },
+  {
+    "active": 0,
+    "installed": 45,
+    "downloaded": 24,
+    "failed": 0,
+    "label": "v123"
+  },
+  {
+    "active": 54,
+    "installed": 518,
+    "downloaded": 258,
+    "failed": 2,
+    "label": "v184"
+  },
+  {
+    "active": 2,
+    "installed": 215,
+    "downloaded": 67,
+    "failed": 4,
+    "label": "v44"
+  },
+  {
+    "active": 8,
+    "installed": 449,
+    "downloaded": 178,
+    "failed": 1,
+    "label": "v99"
+  },
+  {
+    "active": 0,
+    "installed": 122,
+    "downloaded": 52,
+    "failed": 0,
+    "label": "v158"
+  },
+  {
+    "active": 42,
+    "installed": 296,
+    "downloaded": 152,
+    "failed": 1,
+    "label": "v187"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v39"
+  },
+  {
+    "active": 73,
+    "installed": 464,
+    "downloaded": 95,
+    "failed": 3,
+    "label": "v71"
+  },
+  {
+    "active": 134,
+    "installed": 890,
+    "downloaded": 354,
+    "failed": 3,
+    "label": "v112"
+  },
+  {
+    "active": 2,
+    "installed": 6,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v55"
+  },
+  {
+    "active": 106,
+    "installed": 1265,
+    "downloaded": 504,
+    "failed": 5,
+    "label": "v163"
+  },
+  {
+    "active": 1,
+    "installed": 3,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v93"
+  },
+  {
+    "active": 22,
+    "installed": 264,
+    "downloaded": 83,
+    "failed": 1,
+    "label": "v189"
+  },
+  {
+    "active": 13,
+    "installed": 39,
+    "downloaded": 11,
+    "failed": 0,
+    "label": "v7"
+  },
+  {
+    "active": 12,
+    "installed": 207,
+    "downloaded": 73,
+    "failed": 0,
+    "label": "v31"
+  },
+  {
+    "active": 2,
+    "installed": 5,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v91"
+  },
+  {
+    "active": 43,
+    "installed": 603,
+    "downloaded": 250,
+    "failed": 1,
+    "label": "v90"
+  },
+  {
+    "active": 213,
+    "installed": 753,
+    "downloaded": 376,
+    "failed": 7,
+    "label": "v186"
+  },
+  {
+    "active": 56,
+    "installed": 429,
+    "downloaded": 191,
+    "failed": 3,
+    "label": "v133"
+  },
+  {
+    "active": 2,
+    "installed": 107,
+    "downloaded": 49,
+    "failed": 2,
+    "label": "v105"
+  },
+  {
+    "active": 61,
+    "installed": 570,
+    "downloaded": 226,
+    "failed": 1,
+    "label": "v106"
+  },
+  {
+    "active": 113,
+    "installed": 610,
+    "downloaded": 235,
+    "failed": 0,
+    "label": "v81"
+  },
+  {
+    "active": 0,
+    "installed": 5,
+    "downloaded": 3,
+    "failed": 0,
+    "label": "v6"
+  },
+  {
+    "active": 9,
+    "installed": 15,
+    "downloaded": 7,
+    "failed": 0,
+    "label": "v135"
+  },
+  {
+    "active": 4,
+    "installed": 86,
+    "downloaded": 38,
+    "failed": 0,
+    "label": "v143"
+  },
+  {
+    "active": 2,
+    "installed": 4,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v19"
+  },
+  {
+    "active": 1226,
+    "installed": 1229,
+    "downloaded": 532,
+    "failed": 2,
+    "label": "v190"
+  },
+  {
+    "active": 0,
+    "installed": 3,
+    "downloaded": 1,
+    "failed": 1,
+    "label": "v36"
+  },
+  {
+    "active": 7,
+    "installed": 43,
+    "downloaded": 23,
+    "failed": 0,
+    "label": "v95"
+  },
+  {
+    "active": 2,
+    "installed": 12,
+    "downloaded": 10,
+    "failed": 1,
+    "label": "v3"
+  },
+  {
+    "active": 2,
+    "installed": 13,
+    "downloaded": 7,
+    "failed": 0,
+    "label": "v140"
+  },
+  {
+    "active": 205,
+    "installed": 578,
+    "downloaded": 164,
+    "failed": 7,
+    "label": "v49"
+  },
+  {
+    "active": 0,
+    "installed": 7,
+    "downloaded": 4,
+    "failed": 0,
+    "label": "v108"
+  },
+  {
+    "active": 3,
+    "installed": 20,
+    "downloaded": 7,
+    "failed": 0,
+    "label": "v10"
+  },
+  {
+    "active": 31,
+    "installed": 925,
+    "downloaded": 354,
+    "failed": 2,
+    "label": "v160"
+  },
+  {
+    "active": 69,
+    "installed": 646,
+    "downloaded": 302,
+    "failed": 4,
+    "label": "v175"
+  },
+  {
+    "active": 8,
+    "installed": 45,
+    "downloaded": 19,
+    "failed": 0,
+    "label": "v56"
+  },
+  {
+    "active": 18,
+    "installed": 218,
+    "downloaded": 88,
+    "failed": 0,
+    "label": "v30"
+  },
+  {
+    "active": 4,
+    "installed": 133,
+    "downloaded": 47,
+    "failed": 0,
+    "label": "v26"
+  },
+  {
+    "active": 81,
+    "installed": 610,
+    "downloaded": 306,
+    "failed": 3,
+    "label": "v185"
+  },
+  {
+    "active": 53,
+    "installed": 515,
+    "downloaded": 247,
+    "failed": 1,
+    "label": "v82"
+  },
+  {
+    "active": 6,
+    "installed": 9,
+    "downloaded": 5,
+    "failed": 0,
+    "label": "v14"
+  },
+  {
+    "active": 0,
+    "installed": 2,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v122"
+  },
+  {
+    "active": 59,
+    "installed": 462,
+    "downloaded": 176,
+    "failed": 5,
+    "label": "v147"
+  },
+  {
+    "active": 11,
+    "installed": 45,
+    "downloaded": 65,
+    "failed": 13,
+    "label": "v85"
+  },
+  {
+    "active": 5,
+    "installed": 251,
+    "downloaded": 119,
+    "failed": 1,
+    "label": "v152"
+  },
+  {
+    "active": 0,
+    "installed": 3,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v88"
+  },
+  {
+    "active": 6,
+    "installed": 341,
+    "downloaded": 149,
+    "failed": 1,
+    "label": "v150"
+  },
+  {
+    "active": 1,
+    "installed": 12,
+    "downloaded": 6,
+    "failed": 0,
+    "label": "v58"
+  },
+  {
+    "active": 32,
+    "installed": 313,
+    "downloaded": 122,
+    "failed": 0,
+    "label": "v32"
+  },
+  {
+    "active": 3,
+    "installed": 108,
+    "downloaded": 45,
+    "failed": 0,
+    "label": "v153"
+  },
+  {
+    "active": 1,
+    "installed": 11,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v67"
+  },
+  {
+    "active": 0,
+    "installed": 2,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v137"
+  },
+  {
+    "active": 0,
+    "installed": 16,
+    "downloaded": 5,
+    "failed": 1,
+    "label": "v162"
+  },
+  {
+    "active": 2,
+    "installed": 115,
+    "downloaded": 57,
+    "failed": 1,
+    "label": "v138"
+  },
+  {
+    "active": 1,
+    "installed": 111,
+    "downloaded": 54,
+    "failed": 0,
+    "label": "v129"
+  },
+  {
+    "active": 138,
+    "installed": 627,
+    "downloaded": 258,
+    "failed": 1,
+    "label": "v83"
+  },
+  {
+    "active": 0,
+    "installed": 3,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v79"
+  },
+  {
+    "active": -1,
+    "installed": 66,
+    "downloaded": 18,
+    "failed": 1,
+    "label": "v119"
+  },
+  {
+    "active": 2,
+    "installed": 4,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v63"
+  },
+  {
+    "active": 11,
+    "installed": 93,
+    "downloaded": 10,
+    "failed": 1,
+    "label": "v70"
+  },
+  {
+    "active": 7,
+    "installed": 136,
+    "downloaded": 59,
+    "failed": 0,
+    "label": "v40"
+  },
+  {
+    "active": 2,
+    "installed": 11,
+    "downloaded": 5,
+    "failed": 0,
+    "label": "v15"
+  },
+  {
+    "active": 0,
+    "installed": 11,
+    "downloaded": 3,
+    "failed": 0,
+    "label": "v27"
+  },
+  {
+    "active": 14,
+    "installed": 585,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "23.2.0"
+  },
+  {
+    "active": 1,
+    "installed": 17,
+    "downloaded": 4,
+    "failed": 0,
+    "label": "v69"
+  },
+  {
+    "active": 13,
+    "installed": 1018,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.1.0"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v141"
+  },
+  {
+    "active": 1,
+    "installed": 34,
+    "downloaded": 18,
+    "failed": 0,
+    "label": "v177"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v72"
+  },
+  {
+    "active": 7,
+    "installed": 11,
+    "downloaded": 6,
+    "failed": 0,
+    "label": "v13"
+  },
+  {
+    "active": 2,
+    "installed": 11,
+    "downloaded": 8,
+    "failed": 0,
+    "label": "v103"
+  },
+  {
+    "active": 0,
+    "installed": 58,
+    "downloaded": 19,
+    "failed": 0,
+    "label": "v46"
+  },
+  {
+    "active": 10,
+    "installed": 81,
+    "downloaded": 29,
+    "failed": 0,
+    "label": "v22"
+  },
+  {
+    "active": 0,
+    "installed": 6,
+    "downloaded": 3,
+    "failed": 0,
+    "label": "v89"
+  },
+  {
+    "active": 1,
+    "installed": 2,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v54"
+  },
+  {
+    "active": 7,
+    "installed": 201,
+    "downloaded": 92,
+    "failed": 0,
+    "label": "v107"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v50"
+  },
+  {
+    "active": 211,
+    "installed": 855,
+    "downloaded": 389,
+    "failed": 4,
+    "label": "v134"
+  },
+  {
+    "active": 192,
+    "installed": 698,
+    "downloaded": 314,
+    "failed": 4,
+    "label": "v176"
+  },
+  {
+    "active": 30,
+    "installed": 534,
+    "downloaded": 237,
+    "failed": 4,
+    "label": "v109"
+  },
+  {
+    "active": 30,
+    "installed": 595,
+    "downloaded": 236,
+    "failed": 6,
+    "label": "v157"
+  },
+  {
+    "active": -2,
+    "installed": 0,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.7.1"
+  },
+  {
+    "active": 135,
+    "installed": 672,
+    "downloaded": 302,
+    "failed": 1,
+    "label": "v188"
+  },
+  {
+    "active": 44,
+    "installed": 605,
+    "downloaded": 264,
+    "failed": 4,
+    "label": "v115"
+  },
+  {
+    "active": 32,
+    "installed": 509,
+    "downloaded": 234,
+    "failed": 5,
+    "label": "v182"
+  },
+  {
+    "active": 1,
+    "installed": 166,
+    "downloaded": 70,
+    "failed": 0,
+    "label": "v124"
+  },
+  {
+    "active": 6,
+    "installed": 39,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.6.0"
+  },
+  {
+    "active": 85,
+    "installed": 2269,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.4.0"
+  },
+  {
+    "active": 1,
+    "installed": 58,
+    "downloaded": 13,
+    "failed": 0,
+    "label": "v113"
+  },
+  {
+    "active": 14,
+    "installed": 202,
+    "downloaded": 88,
+    "failed": 0,
+    "label": "v117"
+  },
+  {
+    "active": 1,
+    "installed": 10,
+    "downloaded": 7,
+    "failed": 0,
+    "label": "v34"
+  },
+  {
+    "active": 2,
+    "installed": 6,
+    "downloaded": 7,
+    "failed": 0,
+    "label": "v2"
+  },
+  {
+    "active": 0,
+    "installed": 2,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v171"
+  },
+  {
+    "active": 13,
+    "installed": 1025,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "23.4.0"
+  },
+  {
+    "active": 3,
+    "installed": 101,
+    "downloaded": 43,
+    "failed": 1,
+    "label": "v173"
+  },
+  {
+    "active": 0,
+    "installed": 4,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v4"
+  },
+  {
+    "active": 70,
+    "installed": 415,
+    "downloaded": 105,
+    "failed": 0,
+    "label": "v61"
+  },
+  {
+    "active": 36,
+    "installed": 838,
+    "downloaded": 339,
+    "failed": 5,
+    "label": "v154"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v33"
+  },
+  {
+    "active": 49,
+    "installed": 452,
+    "downloaded": 196,
+    "failed": 1,
+    "label": "v126"
+  },
+  {
+    "active": 8,
+    "installed": 94,
+    "downloaded": 27,
+    "failed": 0,
+    "label": "v59"
+  },
+  {
+    "active": 0,
+    "installed": 4,
+    "downloaded": 4,
+    "failed": 0,
+    "label": "v62"
+  },
+  {
+    "active": 0,
+    "installed": 58,
+    "downloaded": 26,
+    "failed": 0,
+    "label": "v142"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "23.1.1"
+  },
+  {
+    "active": 11,
+    "installed": 125,
+    "downloaded": 62,
+    "failed": 2,
+    "label": "v179"
+  },
+  {
+    "active": 8,
+    "installed": 177,
+    "downloaded": 54,
+    "failed": 0,
+    "label": "v35"
+  },
+  {
+    "active": 1,
+    "installed": 190,
+    "downloaded": 67,
+    "failed": 1,
+    "label": "v45"
+  },
+  {
+    "active": 2,
+    "installed": 48,
+    "downloaded": 23,
+    "failed": 1,
+    "label": "v156"
+  },
+  {
+    "active": -1,
+    "installed": 0,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.6.2"
+  },
+  {
+    "active": 87,
+    "installed": 715,
+    "downloaded": 275,
+    "failed": 1,
+    "label": "v111"
+  },
+  {
+    "active": 4,
+    "installed": 219,
+    "downloaded": 107,
+    "failed": 1,
+    "label": "v169"
+  },
+  {
+    "active": 2,
+    "installed": 62,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.7.0"
+  },
+  {
+    "active": 3,
+    "installed": 5,
+    "downloaded": 5,
+    "failed": 0,
+    "label": "v87"
+  },
+  {
+    "active": 28,
+    "installed": 645,
+    "downloaded": 283,
+    "failed": 1,
+    "label": "v101"
+  },
+  {
+    "active": 0,
+    "installed": 16,
+    "downloaded": 10,
+    "failed": 0,
+    "label": "v148"
+  },
+  {
+    "active": -3,
+    "installed": 4,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.2.0"
+  },
+  {
+    "active": 2,
+    "installed": 139,
+    "downloaded": 62,
+    "failed": 0,
+    "label": "v130"
+  },
+  {
+    "active": 21,
+    "installed": 359,
+    "downloaded": 167,
+    "failed": 3,
+    "label": "v145"
+  },
+  {
+    "active": 1,
+    "installed": 2,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v52"
+  },
+  {
+    "active": 0,
+    "installed": 6,
+    "downloaded": 3,
+    "failed": 0,
+    "label": "v76"
+  },
+  {
+    "active": 1,
+    "installed": 2,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v92"
+  },
+  {
+    "active": 2,
+    "installed": 18,
+    "downloaded": 7,
+    "failed": 0,
+    "label": "v12"
+  },
+  {
+    "active": 1,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v11"
+  },
+  {
+    "active": 26,
+    "installed": 696,
+    "downloaded": 296,
+    "failed": 5,
+    "label": "v151"
+  },
+  {
+    "active": 24,
+    "installed": 929,
+    "downloaded": 384,
+    "failed": 5,
+    "label": "v164"
+  },
+  {
+    "active": 0,
+    "installed": 3,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v139"
+  },
+  {
+    "active": 13,
+    "installed": 342,
+    "downloaded": 138,
+    "failed": 1,
+    "label": "v146"
+  },
+  {
+    "active": 33,
+    "installed": 433,
+    "downloaded": 186,
+    "failed": 3,
+    "label": "v167"
+  },
+  {
+    "active": 178,
+    "installed": 794,
+    "downloaded": 348,
+    "failed": 4,
+    "label": "v180"
+  },
+  {
+    "active": 1,
+    "installed": 137,
+    "downloaded": 51,
+    "failed": 0,
+    "label": "v29"
+  },
+  {
+    "active": 44,
+    "installed": 653,
+    "downloaded": 285,
+    "failed": 1,
+    "label": "v98"
+  },
+  {
+    "active": 189,
+    "installed": 848,
+    "downloaded": 368,
+    "failed": 6,
+    "label": "v174"
+  },
+  {
+    "active": 3,
+    "installed": 73,
+    "downloaded": 32,
+    "failed": 0,
+    "label": "v96"
+  },
+  {
+    "active": 24,
+    "installed": 244,
+    "downloaded": 118,
+    "failed": 2,
+    "label": "v183"
+  },
+  {
+    "active": 5,
+    "installed": 28,
+    "downloaded": 16,
+    "failed": 1,
+    "label": "v5"
+  },
+  {
+    "active": 0,
+    "installed": 22,
+    "downloaded": 11,
+    "failed": 0,
+    "label": "v161"
+  },
+  {
+    "active": 34,
+    "installed": 375,
+    "downloaded": 175,
+    "failed": 3,
+    "label": "v128"
+  },
+  {
+    "active": 7,
+    "installed": 260,
+    "downloaded": 110,
+    "failed": 0,
+    "label": "v149"
+  },
+  {
+    "active": 0,
+    "installed": 89,
+    "downloaded": 35,
+    "failed": 2,
+    "label": "v144"
+  },
+  {
+    "active": 13,
+    "installed": 36,
+    "downloaded": 15,
+    "failed": 0,
+    "label": "v16"
+  },
+  {
+    "active": 3,
+    "installed": 140,
+    "downloaded": 78,
+    "failed": 0,
+    "label": "v181"
+  },
+  {
+    "active": 1,
+    "installed": 51,
+    "downloaded": 13,
+    "failed": 0,
+    "label": "v23"
+  },
+  {
+    "active": 0,
+    "installed": 2,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v18"
+  },
+  {
+    "active": 4,
+    "installed": 119,
+    "downloaded": 51,
+    "failed": 1,
+    "label": "v132"
+  },
+  {
+    "active": 3,
+    "installed": 7,
+    "downloaded": 2,
+    "failed": 0,
+    "label": "v1"
+  },
+  {
+    "active": 37,
+    "installed": 1284,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.3.0"
+  },
+  {
+    "active": 10,
+    "installed": 12,
+    "downloaded": 9,
+    "failed": 0,
+    "label": "v74"
+  },
+  {
+    "active": 0,
+    "installed": 1,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v17"
+  },
+  {
+    "active": 0,
+    "installed": 19,
+    "downloaded": 8,
+    "failed": 0,
+    "label": "v121"
+  },
+  {
+    "active": 3,
+    "installed": 27,
+    "downloaded": 6,
+    "failed": 0,
+    "label": "v21"
+  },
+  {
+    "active": 191,
+    "installed": 2808,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.6.0"
+  },
+  {
+    "active": 14,
+    "installed": 304,
+    "downloaded": 125,
+    "failed": 1,
+    "label": "v110"
+  },
+  {
+    "active": 139,
+    "installed": 851,
+    "downloaded": 303,
+    "failed": 4,
+    "label": "v155"
+  },
+  {
+    "active": 3,
+    "installed": 61,
+    "downloaded": 28,
+    "failed": 0,
+    "label": "v104"
+  },
+  {
+    "active": 9,
+    "installed": 221,
+    "downloaded": 89,
+    "failed": 0,
+    "label": "v136"
+  },
+  {
+    "active": 7,
+    "installed": 150,
+    "downloaded": 64,
+    "failed": 0,
+    "label": "v28"
+  },
+  {
+    "active": 1,
+    "installed": 1,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v51"
+  },
+  {
+    "active": 126,
+    "installed": 2457,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.5.0"
+  },
+  {
+    "active": 2,
+    "installed": 152,
+    "downloaded": 52,
+    "failed": 0,
+    "label": "v78"
+  },
+  {
+    "active": 6,
+    "installed": 7,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v73"
+  },
+  {
+    "active": 105,
+    "installed": 624,
+    "downloaded": 228,
+    "failed": 7,
+    "label": "v114"
+  },
+  {
+    "active": 1,
+    "installed": 54,
+    "downloaded": 27,
+    "failed": 0,
+    "label": "v100"
+  },
+  {
+    "active": 3,
+    "installed": 43,
+    "downloaded": 17,
+    "failed": 0,
+    "label": "v24"
+  },
+  {
+    "active": 55,
+    "installed": 657,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "23.3.0"
+  },
+  {
+    "active": 2,
+    "installed": 3,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "v64"
+  },
+  {
+    "active": 6,
+    "installed": 145,
+    "downloaded": 49,
+    "failed": 1,
+    "label": "v42"
+  },
+  {
+    "active": 4,
+    "installed": 98,
+    "downloaded": 22,
+    "failed": 0,
+    "label": "v66"
+  },
+  {
+    "active": 4,
+    "installed": 60,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.6.1"
+  },
+  {
+    "active": 3,
+    "installed": 380,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.8.0"
+  },
+  {
+    "active": 15,
+    "installed": 289,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "22.11.0"
+  },
+  {
+    "active": 0,
+    "installed": 8,
+    "downloaded": 3,
+    "failed": 0,
+    "label": "v131"
+  },
+  {
+    "active": 10,
+    "installed": 241,
+    "downloaded": 43,
+    "failed": 0,
+    "label": "v68"
+  },
+  {
+    "active": -2,
+    "installed": 0,
+    "downloaded": 0,
+    "failed": 0,
+    "label": "24.7.0"
+  },
+  {
+    "active": 0,
+    "installed": 2,
+    "downloaded": 1,
+    "failed": 0,
+    "label": "v20"
+  },
+  {
+    "active": 0,
+    "installed": 0,
+    "downloaded": 0,
+    "failed": 1,
+    "label": "v37"
+  }
+]
