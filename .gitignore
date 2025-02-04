@@ -52,5 +52,4 @@ __blobstorage__
 __queuestorage__
 
 # Frontend build
-frontend/dist
-frontend/src/mocks/handlers
+# frontend/dist
