@@ -15,8 +15,7 @@ import * as bodyParser from "body-parser";
 const domain = require("express-domain-middleware");
 import * as express from "express";
 import * as q from "q";
-import path = require("path");
-
+import * as path from "path";
 interface Secret {
   id: string;
   value: string;
@@ -65,24 +64,8 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       const appInsights = api.appInsights();
       const redisManager = new RedisManager();
 
-      // Configure path for static files
-      const publicPath = path.join(__dirname, "../../../frontend/dist");
-
-      // Middleware for serving static files
-      app.use(express.static(publicPath));
-
       // First, to wrap all requests and catch all exceptions.
       app.use(domain);
-
-      // Middleware to check if the request is for an API route
-      const isApiRequest = (req: express.Request) => {
-        return (
-          req.path.startsWith("/v0.1/") ||
-          req.path.startsWith("/v0.2/") ||
-          req.path.startsWith("/auth/") ||
-          req.path.startsWith("/authenticated/")
-        );
-      };
 
       // Monkey-patch res.send and res.setHeader to no-op after the first call and prevent "already sent" errors.
       app.use((req: express.Request, res: express.Response, next: (err?: any) => void): any => {
@@ -141,7 +124,7 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       app.use(appInsights.router());
 
       // app.get("/", (req: express.Request, res: express.Response, next: (err?: Error) => void): any => {
-      //   res.send("Turneo CodePush");
+      //   res.send("Welcome to the CodePush REST API!");
       // });
 
       app.set("etag", false);
@@ -179,6 +162,14 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
         app.use(auth.legacyRouter());
       }
 
+      // 1. Serve the static files from "public"
+      app.use(express.static(path.join(__dirname, "../../public")));
+
+      // 2. For an SPA (React, Vue, Angular), catch all and serve index.html
+      app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "../../public", "index.html"));
+      });
+
       // Error handler needs to be the last middleware so that it can catch all unhandled exceptions
       app.use(appInsights.errorHandler);
 
@@ -196,40 +187,6 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
             })
             .done();
         }, Number(process.env.REFRESH_CREDENTIALS_INTERVAL) || 24 * 60 * 60 * 1000 /*daily*/);
-      }
-
-      // Additional security settings for production
-      if (process.env.NODE_ENV === "production") {
-        app.set("trust proxy", 1); // For proxies (e.g., nginx)
-
-        // Additional security settings
-        app.use((req: express.Request, res: express.Response, next: Function) => {
-          res.setHeader("X-Frame-Options", "DENY");
-          res.setHeader("X-Content-Type-Options", "nosniff");
-          res.setHeader("X-XSS-Protection", "1; mode=block");
-          next();
-        });
-      }
-
-      // Configure API routes and frontend
-      app.get("*", (req: express.Request, res: express.Response, next: Function) => {
-        if (isApiRequest(req)) {
-          next();
-        } else {
-          res.sendFile(path.join(publicPath, "index.html"));
-        }
-      });
-
-      // Configure port
-      const port = process.env.PORT || 3000;
-      app.set("port", port);
-
-      // Error handling for production
-      if (process.env.NODE_ENV === "production") {
-        app.use((err: any, req: express.Request, res: express.Response, next: Function) => {
-          console.error(err.stack);
-          res.status(500).send("Something broke!");
-        });
       }
 
       done(null, app, storage);
