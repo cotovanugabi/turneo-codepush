@@ -15,7 +15,6 @@ import {
   CheckCircleIcon,
   XCircleIcon,
   RocketIcon,
-  InfoIcon,
   DownloadIcon,
   PencilIcon,
 } from "lucide-react";
@@ -46,7 +45,6 @@ import {
 } from "./lib/client";
 import { Release } from "./types";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import {
   Sheet,
   SheetContent,
@@ -59,8 +57,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { PieChart, Pie, Cell } from "recharts";
-import { RadialProgress } from "@/components/ui/radial-progress";
-import { CircularProgress } from "@/components/ui/circular-progress";
 import {
   Dialog,
   DialogContent,
@@ -515,7 +511,7 @@ function ReleaseComponent() {
                     dataKey="value"
                     strokeWidth={0}
                   >
-                    {ROLLOUT_DATA.map((entry, index) => (
+                    {ROLLOUT_DATA.map((_, index) => (
                       <Cell
                         key={`cell-${index}`}
                         fill={
@@ -569,7 +565,7 @@ function ReleaseComponent() {
                     dataKey="value"
                     strokeWidth={0}
                   >
-                    {ACTIVE_DATA.map((entry, index) => (
+                    {ACTIVE_DATA.map((_, index) => (
                       <Cell
                         key={`cell-${index}`}
                         fill={
