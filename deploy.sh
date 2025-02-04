@@ -19,7 +19,7 @@ rm -rf /home/site/wwwroot/*
 cp -r /home/site/repository/api/* /home/site/wwwroot/
 
 # Ensure the public directory exists
-mkdir -p /home/site/wwwroot/public
+# mkdir -p /home/site/wwwroot/public
 
 # Copy frontend build to public directory
-cp -r /home/site/repository/frontend/dist/* /home/site/wwwroot/public/
+# cp -r /home/site/repository/frontend/dist/* /home/site/wwwroot/public/

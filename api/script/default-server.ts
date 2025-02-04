@@ -15,7 +15,7 @@ import * as bodyParser from "body-parser";
 const domain = require("express-domain-middleware");
 import * as express from "express";
 import * as q from "q";
-import * as path from "path";
+
 interface Secret {
   id: string;
   value: string;
@@ -123,17 +123,9 @@ export function start(done: (err?: any, server?: express.Express, storage?: Stor
       // Before all other middleware to ensure all requests are tracked.
       app.use(appInsights.router());
 
-      // 1. Serve the static files from "public"
-      app.use(express.static(path.join(__dirname, "../../public")));
-
-      // 2. For an SPA (React, Vue, Angular), catch all and serve index.html
-      app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "../../public", "index.html"));
+      app.get("/", (req: express.Request, res: express.Response, next: (err?: Error) => void): any => {
+        res.send("Welcome to the CodePush REST API!");
       });
-
-      // app.get("/", (req: express.Request, res: express.Response, next: (err?: Error) => void): any => {
-      //   res.send("Welcome to the CodePush REST API!");
-      // });
 
       app.set("etag", false);
       app.set("views", __dirname + "/views");

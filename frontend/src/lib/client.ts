@@ -16,5 +16,11 @@ export const appsQueryOptions = queryOptions({
 
 export const releasesQueryOptions = queryOptions({
   queryKey: ["releases"],
-  queryFn: () => fetch("/releases").then((r) => r.json()) as Promise<Release[]>,
+  queryFn: () =>
+    fetch("/v0.1/apps/turneoapp/turneo-ios/deployments/Production/releases", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    }).then((r) => r.json()) as Promise<Release[]>,
 });
