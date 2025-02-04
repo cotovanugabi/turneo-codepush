@@ -502,14 +502,14 @@ function ReleaseComponent() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col items-center justify-center pt-4">
-              <div className="relative w-[160px] h-[160px]">
-                <PieChart width={160} height={160}>
+              <div className="relative w-[240px] h-[240px]">
+                <PieChart width={240} height={240}>
                   <Pie
                     data={ROLLOUT_DATA}
                     cx="50%"
                     cy="50%"
-                    innerRadius={54}
-                    outerRadius={64}
+                    innerRadius={82}
+                    outerRadius={96}
                     startAngle={90}
                     endAngle={-270}
                     dataKey="value"
@@ -556,14 +556,14 @@ function ReleaseComponent() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col items-center justify-center pt-4">
-              <div className="relative w-[160px] h-[160px]">
-                <PieChart width={160} height={160}>
+              <div className="relative w-[240px] h-[240px]">
+                <PieChart width={240} height={240}>
                   <Pie
                     data={ACTIVE_DATA}
                     cx="50%"
                     cy="50%"
-                    innerRadius={54}
-                    outerRadius={64}
+                    innerRadius={82}
+                    outerRadius={96}
                     startAngle={90}
                     endAngle={-270}
                     dataKey="value"
